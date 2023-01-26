@@ -19,6 +19,7 @@ class Kaart
     drawVillage(x,y )
     {
         
+        
         let g = this.ctx
         let randomgetal =  Math.random(0,1);
 
@@ -96,7 +97,7 @@ class Kaart
         ctx.arc(y+40, x, 10, 0, 2 * Math.PI);
         ctx.arc(y+60, x-60, 6, 0, 2 * Math.PI);
         ctx.fill();
-
+    
     {}
       
     }
@@ -109,7 +110,7 @@ class Kaart
         ctx.font = "35px cursive";
         ctx.fillStyle = "white";
         ctx.fillText("Fijn kerstmistoegwenst", 45, 76);
-        ctx.fillText("En alvast een gelukkig nieuwjaar!", 35, 540);
+        ctx.fillText("En alvast een gelukkig nieuwjaar!", 200, 540);
     }
     // Gemakkt door Ryan Schorel
     Frame()
@@ -120,11 +121,22 @@ class Kaart
 
     doGameFrame() {
         this.setBackground();
-        this.drawVillage(500,250);
-        this.drawVillage(350,-30);
+        this.drawVillage(100,250);
+        this.drawVillage(500,-60);
         this.tekst();
+        this.drawTree(850,500);
+        this.drawTree(850,400);
+        this.drawTree(210,400);
+
+        this.drawTree(90,500);
+        this.drawTree(50,500);
+        this.drawTree(20,500);
+
+
+
         this.drawTree(450,400);
-        this.drawSnowman(500, 400);
+
+        this.drawSnowman(1000, 900);
         this.ctx.drawImage(this.foto, this.fotoX, this.fotoY);
         this.fotoX += 10;
     }
