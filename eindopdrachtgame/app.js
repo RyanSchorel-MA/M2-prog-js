@@ -91,7 +91,7 @@ class Kaart
         ctx.fill();
         ctx.stroke();
 
-
+        // Vuurwerk
         
         ctx.beginPath();
         ctx.fillStyle = "#D29116"
