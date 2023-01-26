@@ -5,6 +5,7 @@ class Kaart
         this.c = document.getElementById("myCanvas");
         this.ctx = this.c.getContext("2d");
     }
+    
 
     setBackground()
     {
@@ -17,6 +18,7 @@ class Kaart
 
     drawVillage(x,y )
     {
+        
         let g = this.ctx
         let randomgetal =  Math.random(0,1);
 
@@ -116,17 +118,20 @@ class Kaart
         setInterval(function () { scope.doGameFrame() }, 33)
     }
 
-    doGameFrame()
-    {
+    doGameFrame() {
         this.setBackground();
         this.drawVillage(500,250);
         this.drawVillage(350,-30);
         this.tekst();
         this.drawTree(450,400);
+        this.drawSnowman(500, 400);
         this.ctx.drawImage(this.foto, this.fotoX, this.fotoY);
         this.fotoX += 10;
-        
     }
+    
+    
+    
+    
     
     
 }
