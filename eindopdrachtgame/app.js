@@ -1,4 +1,4 @@
-class Kaart
+class kerstKaart
 {
     constructor()
     {
@@ -176,5 +176,5 @@ class Kaart
     
 }
 
-let kaart = new Kaart;
-kaart.Frame();
+let kerstkaart = new kerstKaart;
+kerstkaart.Frame();
