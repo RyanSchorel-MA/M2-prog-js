@@ -10,7 +10,7 @@ class Kaart
     setBackground()
     {
         let ctx = this.ctx
-        ctx.fillStyle = "#222";
+        ctx.fillStyle = "#325068";
         ctx.fillRect(0,0,1000,600);
 
      
@@ -53,7 +53,18 @@ class Kaart
 
         //De ramen
         g.beginPath();
-            g.fillStyle = "#CCD071"
+        if (randomgetal < 0.15)
+        {
+            g.fillStyle = "black"
+        }
+        else if (randomgetal > 0.3)
+        {
+            g.fillStyle = "#E9E7AA"
+        }
+        else
+        {
+            g.fillStyle = "black"
+        }
         g.moveTo(x+250,y+215);
         g.lineTo(x+150,y+190);
         g.lineTo(x+150,y+240);
@@ -73,13 +84,15 @@ class Kaart
         ctx.beginPath();
         ctx.moveTo(x - 30, y+75);
         ctx.lineTo(x + 50, y+95);
-        ctx.lineTo(x, y - 155);
+        ctx.lineTo(x, y - 135);
         ctx.lineTo(x - 60, y+75);
         ctx.fillStyle = "Green";
         ctx.strokeStyle = "Black";
         ctx.fill();
         ctx.stroke();
 
+
+        
         ctx.beginPath();
         ctx.fillStyle = "#D29116"
         ctx.arc(y+50, x-100, 13, 0, 2 * Math.PI);
@@ -107,38 +120,53 @@ class Kaart
         let ctx = this.ctx
 
         ctx.fillStyle = "black"
-        ctx.font = "35px cursive";
-        ctx.fillStyle = "white";
-        ctx.fillText("Fijn kerstmistoegwenst", 45, 76);
-        ctx.fillText("En alvast een gelukkig nieuwjaar!", 200, 540);
+        ctx.font = "24px cursive";
+        ctx.fillStyle = "#C0E5D1";
+        ctx.fillText("Fijn kerstmis toegwenst :) ", 45, 48);
+        ctx.fillText("En alvast een gelukkig nieuwjaar!", 45, 76);
     }
     // Gemakkt door Ryan Schorel
     Frame()
     {
         let scope = this
-        setInterval(function () { scope.doGameFrame() }, 33)
+        setInterval(function () { scope.doGameFrame() }, 1800)
     }
 
     doGameFrame() {
         this.setBackground();
-        this.drawVillage(100,250);
+        this.drawVillage(80,250);
+        this.drawVillage(80,250);
+        this.drawVillage(590,190);
+
+        this.drawVillage(10,15);
+        this.drawTree(10,500);
+
+
         this.drawVillage(500,-60);
         this.tekst();
+
+        this.drawTree(790,500);
+        this.drawTree(950,500);
+        this.drawTree(910,500);
+
+        this.drawTree(750,500);
+        this.drawTree(810,500);
+
         this.drawTree(850,500);
-        this.drawTree(850,400);
         this.drawTree(210,400);
 
         this.drawTree(90,500);
         this.drawTree(50,500);
         this.drawTree(20,500);
+        this.drawTree(120,500);
+        this.drawTree(160,500);
+        this.drawTree(290,500);
+        this.drawTree(220,500);
+
+        this.drawTree(80,700);
 
 
-
-        this.drawTree(450,400);
-
-        this.drawSnowman(1000, 900);
-        this.ctx.drawImage(this.foto, this.fotoX, this.fotoY);
-        this.fotoX += 10;
+       
     }
     
     
