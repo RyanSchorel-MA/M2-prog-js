@@ -12,8 +12,7 @@ class Kaart
         ctx.fillStyle = "#222";
         ctx.fillRect(0,0,1000,600);
 
-        ctx.strokeStyle = "white";
-        ctx.strokeRect(10,10,980,580);;
+     
     }
 
     drawVillage(x,y )
@@ -96,7 +95,7 @@ class Kaart
         ctx.arc(y+60, x-60, 6, 0, 2 * Math.PI);
         ctx.fill();
 
-      
+    {}
       
     }
         // De 2 Teksten
@@ -120,7 +119,6 @@ class Kaart
     doGameFrame()
     {
         this.setBackground();
-        this.drawVillage(-30,40);
         this.drawVillage(500,250);
         this.drawVillage(350,-30);
         this.tekst();
